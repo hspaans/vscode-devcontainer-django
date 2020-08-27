@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+bandit = "*"
+django-coverage-plugin = "*"
+flake8 = "*"
+flake8-json = "*"
+flake8-django = "*"
+flake8-docstrings = "*"
+
+[packages]
+django = "==3.1.*"
+
+[requires]
+python_version = "3.8"

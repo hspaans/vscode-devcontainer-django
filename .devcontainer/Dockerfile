@@ -1,4 +1,4 @@
-ARG DJANGO="==3.0.*"
+ARG DJANGO="==3.1.*"
 ARG PYTHON=3.8
 FROM python:${PYTHON}
 
@@ -41,12 +41,12 @@ RUN apt-get update \
 
 # Install Django packages
 # hadolint ignore=DL3013
-RUN su - vscode -c "pipenv install django${DJANGO}"
+# RUN su - vscode -c "pipenv install django${DJANGO}"
 
 # Install and configure development packages
 # hadolint ignore=DL3013
-RUN su - vscode -c "pipenv install bandit django-coverage-plugin flake8 flake8-json flake8-django flake8-docstrings --dev" \
-    && su - vscode -c "pipenv run bandit-config-generator -o .bandit.yml"
+# RUN su - vscode -c "pipenv install bandit django-coverage-plugin flake8 flake8-json flake8-django flake8-docstrings --dev" \
+#     && su - vscode -c "pipenv run bandit-config-generator -o .bandit.yml"
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
