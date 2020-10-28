@@ -1,29 +1,17 @@
 {
-  "name": "Django",
-  "build":{
-    "dockerfile": "Dockerfile",
-    "context": "..",
-    "args": {
-      "DJANGO": "==3.1.*",
-      "PYTHON": "3.8"
-    }
-  },
+  "image": "ghcr.io/hspaans/python-devcontainer:3.9.0",
+  "name": "Python",
   "containerEnv": {
     "PIPENV_VENV_IN_PROJECT": "1"
   },
-
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-
   "appPort": [
     8000
   ],
-
   "postCreateCommand": "pipenv update",
-
   "remoteUser": "vscode",
-
   "extensions": [
     "davidanson.vscode-markdownlint",
     "editorconfig.editorconfig",
