@@ -1,2 +1,2 @@
-# vscode-devcontainer-django
- VSCode Dev Container for Django
+# django-template
+ Template for Django
