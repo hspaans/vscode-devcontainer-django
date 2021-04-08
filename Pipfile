@@ -12,7 +12,7 @@ flake8-django = "*"
 flake8-docstrings = "*"
 
 [packages]
-django = "==3.1.*"
+django = "==3.2"
 
 [requires]
 python_version = "3.9"
